@@ -1,0 +1,85 @@
+/* css/qr-order.css */
+
+.section-hero-qr {
+  padding: 160px 0 100px;
+  background: radial-gradient(circle at 100% 50%, rgba(20, 184, 166, 0.1) 0%, #f8fafc 40%);
+  text-align: center;
+}
+
+.section-hero-qr h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 24px;
+  letter-spacing: -1.5px;
+  line-height: 1.15;
+}
+
+.qr-accent {
+  color: #0f766e;
+}
+
+.section-hero-qr p {
+  font-size: 1.3rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.qr-features .card-image-placeholder {
+  background: linear-gradient(135deg, #ccfbf1, #99f6e4);
+  color: #0f766e;
+  font-size: 3rem;
+}
+
+.qr-features .card {
+  text-align: center;
+}
+
+.qr-process {
+  background: #0f172a;
+  color: white;
+  padding: 120px 0;
+}
+
+.qr-process .section-title {
+  color: white;
+}
+
+.qr-process .card-image-placeholder {
+  background: rgba(255,255,255,0.1);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.qr-process h3 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.qr-process p {
+  color: #94a3b8;
+}
+
+.qr-cta {
+  background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
+  padding: 120px 0;
+  color: white;
+  text-align: center;
+}
+
+.qr-cta h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.qr-cta p {
+  font-size: 1.25rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}

@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="/css/style.css" />
   <link rel="stylesheet" href="/css/components.css" />
   <link rel="stylesheet" href="/css/live-commerce.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
 
 <style>
   /* ===== 글로벌 기본 설정 ===== */
@@ -157,7 +158,7 @@
     <nav id="nav-links" style="display:flex;gap:24px;align-items:center;">
       <a href="/" class="nav-item" style="font-size:15px;font-weight:600;color:#334155;text-decoration:none;white-space:nowrap;">홈</a>
       <a href="/live-commerce.html" class="nav-item" style="font-size:15px;font-weight:600;color:#334155;text-decoration:none;white-space:nowrap;">라이브 커머스</a>
-      <a href="/qr-order.html" class="nav-item" style="font-size:15px;font-weight:600;color:#334155;text-decoration:none;white-space:nowrap;">비즈오더 (QR 주문)</a>
+      <a href="/qr-order.html" class="nav-item" style="font-size:15px;font-weight:600;color:#334155;text-decoration:none;white-space:nowrap;">비즈오더</a>
       <a href="/erp-management.html" class="nav-item" style="font-size:15px;font-weight:600;color:#334155;text-decoration:none;white-space:nowrap;">ERP 관리</a>
     </nav>
 
@@ -190,7 +191,7 @@
   ">
     <a href="/" class="nav-item mobile-nav-item" style="display:block;padding:12px 0;font-size:16px;font-weight:600;color:#334155;text-decoration:none;border-bottom:1px solid #f1f5f9;">홈</a>
     <a href="/live-commerce.html" class="nav-item mobile-nav-item" style="display:block;padding:12px 0;font-size:16px;font-weight:600;color:#334155;text-decoration:none;border-bottom:1px solid #f1f5f9;">라이브 커머스</a>
-    <a href="/qr-order.html" class="nav-item mobile-nav-item" style="display:block;padding:12px 0;font-size:16px;font-weight:600;color:#334155;text-decoration:none;border-bottom:1px solid #f1f5f9;">비즈오더 (QR 주문)</a>
+    <a href="/qr-order.html" class="nav-item mobile-nav-item" style="display:block;padding:12px 0;font-size:16px;font-weight:600;color:#334155;text-decoration:none;border-bottom:1px solid #f1f5f9;">비즈오더</a>
     <a href="/erp-management.html" class="nav-item mobile-nav-item" style="display:block;padding:12px 0;font-size:16px;font-weight:600;color:#334155;text-decoration:none;border-bottom:1px solid #f1f5f9;">ERP 관리</a>
     <a href="#consult" style="
       display:block;margin-top:16px;
@@ -294,8 +295,53 @@
         </div>
 
         <div class="demo-visual">
-          <div class="card-image-placeholder" style="height: 420px;">
-            방송 화면 / 운영 관리자 화면 / 주문 흐름 이미지 삽입
+          <div style="width:100%;border-radius:20px;overflow:hidden;background:#f8fafc;border:1px solid #e2e8f0;box-shadow:0 20px 40px rgba(0,0,0,0.08);">
+            <!-- 운영 대시보드 목업 -->
+            <div style="background:#1e293b;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;">
+              <div style="display:flex;align-items:center;gap:8px;">
+                <span style="width:12px;height:12px;border-radius:50%;background:#ef4444;"></span>
+                <span style="width:12px;height:12px;border-radius:50%;background:#f59e0b;"></span>
+                <span style="width:12px;height:12px;border-radius:50%;background:#22c55e;"></span>
+              </div>
+              <span style="color:#94a3b8;font-size:12px;font-weight:600;">BizLive 관리자</span>
+            </div>
+            <div style="padding:20px;display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+              <!-- 좌측: 방송 현황 -->
+              <div style="background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:16px;">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+                  <span style="background:#ef4444;color:#fff;font-size:10px;font-weight:800;padding:3px 8px;border-radius:6px;">LIVE</span>
+                  <span style="font-size:13px;color:#475569;font-weight:600;">실시간 방송 중</span>
+                </div>
+                <div style="background:linear-gradient(135deg,#0f172a,#1e293b);border-radius:10px;height:120px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;">
+                  <div style="margin-bottom:4px;"><i data-lucide="video" style="width:32px;height:32px;color:#60a5fa;stroke-width:1.5;"></i></div>
+                  <div style="font-size:11px;color:#94a3b8;">시청자 128명 접속 중</div>
+                </div>
+                <div style="margin-top:10px;display:flex;justify-content:space-between;font-size:12px;color:#64748b;">
+                  <span>주문 23건</span><span>매출 1,240,000원</span>
+                </div>
+              </div>
+              <!-- 우측: 주문 현황 -->
+              <div style="display:flex;flex-direction:column;gap:10px;">
+                <div style="background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:14px;">
+                  <div style="font-size:12px;color:#94a3b8;font-weight:600;margin-bottom:6px;">최근 주문</div>
+                  <div style="display:flex;align-items:center;gap:10px;">
+                    <div style="width:36px;height:36px;border-radius:8px;background:#dbeafe;display:flex;align-items:center;justify-content:center;"><i data-lucide="package" style="width:18px;height:18px;color:#2563eb;stroke-width:1.5;"></i></div>
+                    <div><div style="font-size:13px;font-weight:700;color:#0f172a;">프리미엄 세트 A</div><div style="font-size:11px;color:#64748b;">2개 · 54,000원</div></div>
+                  </div>
+                </div>
+                <div style="background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:14px;">
+                  <div style="font-size:12px;color:#94a3b8;font-weight:600;margin-bottom:6px;">정산 현황</div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;">
+                    <div><div style="font-size:18px;font-weight:800;color:#0f172a;">1,240,000원</div><div style="font-size:11px;color:#22c55e;font-weight:600;">입금완료 18건</div></div>
+                    <div style="width:40px;height:40px;border-radius:50%;background:#dcfce7;display:flex;align-items:center;justify-content:center;"><i data-lucide="circle-check" style="width:20px;height:20px;color:#16a34a;stroke-width:1.5;"></i></div>
+                  </div>
+                </div>
+                <div style="background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:14px;">
+                  <div style="font-size:12px;color:#94a3b8;font-weight:600;margin-bottom:4px;">알림</div>
+                  <div style="font-size:12px;color:#475569;">미입금 3건 · 배송대기 5건</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -310,73 +356,73 @@
 
       <div class="grid-3">
         <div class="card feature-card">
-          <div class="card-image-placeholder">기능 이미지</div>
+          <div class="card-image-placeholder" style="background:linear-gradient(135deg,#eff6ff,#dbeafe);display:flex;align-items:center;justify-content:center;border:1px solid #bfdbfe;"><i data-lucide="settings" style="width:40px;height:40px;color:#2563eb;stroke-width:1.5;"></i></div>
           <h3>상품 옵션 및 추가금액 설정</h3>
           <p>상품별 옵션 구성과 추가금액 설정을 지원하여 실제 판매 구조에 맞는 상품 운영이 가능합니다.</p>
         </div>
 
         <div class="card feature-card">
-          <div class="card-image-placeholder">기능 이미지</div>
+          <div class="card-image-placeholder" style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);display:flex;align-items:center;justify-content:center;border:1px solid #bbf7d0;"><i data-lucide="store" style="width:40px;height:40px;color:#16a34a;stroke-width:1.5;"></i></div>
           <h3>스토어(지난 상품) 운영</h3>
           <p>방송 종료 후에도 지난 상품을 스토어 형태로 노출하여 추가 판매 기회를 만들 수 있습니다.</p>
         </div>
 
         <div class="card feature-card">
-          <div class="card-image-placeholder">기능 이미지</div>
+          <div class="card-image-placeholder" style="background:linear-gradient(135deg,#fef3c7,#fde68a);display:flex;align-items:center;justify-content:center;border:1px solid #fcd34d;"><i data-lucide="bell-ring" style="width:40px;height:40px;color:#d97706;stroke-width:1.5;"></i></div>
           <h3>라이브 알림 발송</h3>
           <p>방송 일정과 시작 알림을 전달해 시청자 유입과 재방문을 유도할 수 있습니다.</p>
         </div>
 
         <div class="card feature-card">
-          <div class="card-image-placeholder">기능 이미지</div>
+          <div class="card-image-placeholder" style="background:linear-gradient(135deg,#eff6ff,#dbeafe);display:flex;align-items:center;justify-content:center;border:1px solid #bfdbfe;"><i data-lucide="file-text" style="width:40px;height:40px;color:#2563eb;stroke-width:1.5;"></i></div>
           <h3>정산서 자동 발송</h3>
           <p>운영자가 반복적으로 처리하던 정산 업무를 줄이고 정리된 형태로 안내할 수 있습니다.</p>
         </div>
 
         <div class="card feature-card">
-          <div class="card-image-placeholder">기능 이미지</div>
+          <div class="card-image-placeholder" style="background:linear-gradient(135deg,#fef2f2,#fecaca);display:flex;align-items:center;justify-content:center;border:1px solid #fca5a5;"><i data-lucide="alert-triangle" style="width:40px;height:40px;color:#dc2626;stroke-width:1.5;"></i></div>
           <h3>미입금 독촉 알림</h3>
           <p>입금 지연 고객에 대한 관리가 가능해 운영 누락을 줄이고 업무 흐름을 단순화합니다.</p>
         </div>
 
         <div class="card feature-card">
-          <div class="card-image-placeholder">기능 이미지</div>
+          <div class="card-image-placeholder" style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);display:flex;align-items:center;justify-content:center;border:1px solid #bbf7d0;"><i data-lucide="circle-check" style="width:40px;height:40px;color:#16a34a;stroke-width:1.5;"></i></div>
           <h3>입금 자동 체크(엑셀 업로드)</h3>
           <p>엑셀 업로드 방식으로 입금 확인 업무를 보다 빠르게 처리할 수 있습니다.</p>
         </div>
 
         <div class="card feature-card">
-          <div class="card-image-placeholder">기능 이미지</div>
+          <div class="card-image-placeholder" style="background:linear-gradient(135deg,#faf5ff,#e9d5ff);display:flex;align-items:center;justify-content:center;border:1px solid #d8b4fe;"><i data-lucide="megaphone" style="width:40px;height:40px;color:#7c3aed;stroke-width:1.5;"></i></div>
           <h3>공지사항 게시판</h3>
           <p>배송, 운영, 방송 일정, 이벤트 안내 등을 고객에게 명확하게 전달할 수 있습니다.</p>
         </div>
 
         <div class="card feature-card">
-          <div class="card-image-placeholder">기능 이미지</div>
+          <div class="card-image-placeholder" style="background:linear-gradient(135deg,#ecfdf5,#d1fae5);display:flex;align-items:center;justify-content:center;border:1px solid #6ee7b7;"><i data-lucide="message-circle" style="width:40px;height:40px;color:#059669;stroke-width:1.5;"></i></div>
           <h3>문의하기 및 SNS 연결</h3>
           <p>고객 문의를 간편하게 받고 SNS 채널과 연결하여 응대 접근성을 높일 수 있습니다.</p>
         </div>
 
         <div class="card feature-card">
-          <div class="card-image-placeholder">기능 이미지</div>
+          <div class="card-image-placeholder" style="background:linear-gradient(135deg,#fef2f2,#fee2e2);display:flex;align-items:center;justify-content:center;border:1px solid #fca5a5;"><i data-lucide="shield-ban" style="width:40px;height:40px;color:#dc2626;stroke-width:1.5;"></i></div>
           <h3>블랙리스트 관리</h3>
           <p>운영 이슈 발생 고객을 관리할 수 있어 안정적인 방송 운영 환경을 유지할 수 있습니다.</p>
         </div>
 
         <div class="card feature-card">
-          <div class="card-image-placeholder">기능 이미지</div>
+          <div class="card-image-placeholder" style="background:linear-gradient(135deg,#eff6ff,#dbeafe);display:flex;align-items:center;justify-content:center;border:1px solid #93c5fd;"><i data-lucide="users" style="width:40px;height:40px;color:#2563eb;stroke-width:1.5;"></i></div>
           <h3>실시간 시청자 확인</h3>
           <p>현재 접속 상황과 반응을 빠르게 파악하여 방송 흐름을 조정할 수 있습니다.</p>
         </div>
 
         <div class="card feature-card">
-          <div class="card-image-placeholder">기능 이미지</div>
+          <div class="card-image-placeholder" style="background:linear-gradient(135deg,#fff7ed,#fed7aa);display:flex;align-items:center;justify-content:center;border:1px solid #fdba74;"><i data-lucide="truck" style="width:40px;height:40px;color:#ea580c;stroke-width:1.5;"></i></div>
           <h3>배송비/도서산간 배송비 설정</h3>
           <p>상품별 배송비와 지역별 추가 배송비를 세분화하여 설정할 수 있습니다.</p>
         </div>
 
         <div class="card feature-card">
-          <div class="card-image-placeholder">기능 이미지</div>
+          <div class="card-image-placeholder" style="background:linear-gradient(135deg,#fdf4ff,#f5d0fe);display:flex;align-items:center;justify-content:center;border:1px solid #e879f9;"><i data-lucide="palette" style="width:40px;height:40px;color:#c026d3;stroke-width:1.5;"></i></div>
           <h3>방송 필터 및 채팅 커스터마이징</h3>
           <p>방송 화면 분위기와 채팅 시인성을 조정해 브랜드 톤에 맞는 운영이 가능합니다.</p>
         </div>
@@ -612,6 +658,7 @@
 </footer>
 
   <script src="/js/main.js"></script>
+  <script>if(typeof lucide!=='undefined')lucide.createIcons();</script>
 
 <script>
 // 햄버거 메뉴 토글

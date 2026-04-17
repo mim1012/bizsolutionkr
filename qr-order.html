@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>비즈오더 | QR 테이블 주문 & 매장 운영 시스템</title>
+  <title>비즈오더 | 매장 QR 주문 & 운영 통합 시스템</title>
+  <script src="https://unpkg.com/lucide@latest"></script>
   <style>
     * {
       box-sizing: border-box;
@@ -875,7 +876,7 @@
     <nav id="nav-links" style="display:flex;gap:24px;align-items:center;">
       <a href="/" class="nav-item" style="font-size:15px;font-weight:600;color:#334155;text-decoration:none;white-space:nowrap;">홈</a>
       <a href="/live-commerce.html" class="nav-item" style="font-size:15px;font-weight:600;color:#334155;text-decoration:none;white-space:nowrap;">라이브 커머스</a>
-      <a href="/qr-order.html" class="nav-item" style="font-size:15px;font-weight:600;color:#334155;text-decoration:none;white-space:nowrap;">비즈오더 (QR 주문)</a>
+      <a href="/qr-order.html" class="nav-item" style="font-size:15px;font-weight:600;color:#334155;text-decoration:none;white-space:nowrap;">비즈오더</a>
       <a href="/erp-management.html" class="nav-item" style="font-size:15px;font-weight:600;color:#334155;text-decoration:none;white-space:nowrap;">ERP 관리</a>
     </nav>
 
@@ -908,7 +909,7 @@
   ">
     <a href="/" class="nav-item mobile-nav-item" style="display:block;padding:12px 0;font-size:16px;font-weight:600;color:#334155;text-decoration:none;border-bottom:1px solid #f1f5f9;">홈</a>
     <a href="/live-commerce.html" class="nav-item mobile-nav-item" style="display:block;padding:12px 0;font-size:16px;font-weight:600;color:#334155;text-decoration:none;border-bottom:1px solid #f1f5f9;">라이브 커머스</a>
-    <a href="/qr-order.html" class="nav-item mobile-nav-item" style="display:block;padding:12px 0;font-size:16px;font-weight:600;color:#334155;text-decoration:none;border-bottom:1px solid #f1f5f9;">비즈오더 (QR 주문)</a>
+    <a href="/qr-order.html" class="nav-item mobile-nav-item" style="display:block;padding:12px 0;font-size:16px;font-weight:600;color:#334155;text-decoration:none;border-bottom:1px solid #f1f5f9;">비즈오더</a>
     <a href="/erp-management.html" class="nav-item mobile-nav-item" style="display:block;padding:12px 0;font-size:16px;font-weight:600;color:#334155;text-decoration:none;border-bottom:1px solid #f1f5f9;">ERP 관리</a>
     <a href="#consult" style="
       display:block;margin-top:16px;
@@ -937,7 +938,7 @@
   <section class="hero anchor-offset" id="hero">
     <div class="container hero-grid">
       <div>
-        <div class="hero-badge">QR 테이블 주문 · POS · 주방 · 웨이팅 통합</div>
+        <div class="hero-badge">비즈오더 · QR 주문 · 주방 · 웨이팅 통합</div>
 
         <h1 class="hero-title">
           매장 운영, 주문부터 정산까지<br />
@@ -945,13 +946,13 @@
         </h1>
 
         <p class="hero-desc">
-          비즈오더는 QR 테이블 주문, 주방 디스플레이, 홀 테이블 관리, 웨이팅 관리, 매출 분석까지
+          비즈오더는 매장 QR 주문, 주방 디스플레이, 홀 테이블 관리, 웨이팅 관리, 매출 분석까지
           한 번에 운영할 수 있는 매장 운영 통합 시스템입니다. 주문 누락을 줄이고, 직원 동선을 줄이고,
           운영 효율을 높이는 실무형 솔루션입니다.
         </p>
 
         <div class="hero-tags">
-          <span class="hero-tag">QR 주문</span>
+          <span class="hero-tag">비즈오더</span>
           <span class="hero-tag">주방 KDS</span>
           <span class="hero-tag">홀 테이블 현황</span>
           <span class="hero-tag">웨이팅 관리</span>
@@ -971,7 +972,7 @@
             <span>운영 화면 예시</span>
           </div>
           <div class="hero-card-screen">
-            <img src="https://d2xsxph8kpxj0f.cloudfront.net/310419663030627935/bEKqwvepBRcHwjjYwPMMJS/tableflow-qr-order-XKC6zhQ8Xko8mY2S5vPp46.webp" alt="비즈오더 QR 주문 화면" style="width:100%;height:100%;object-fit:cover;border-radius:16px;">
+            <img src="/images/bizorder_qr_hero.png" alt="비즈오더 QR 주문 화면" style="width:100%;height:100%;object-fit:cover;border-radius:16px;">
           </div>
         </div>
       </div>
@@ -1027,10 +1028,36 @@
         </ul>
       </div>
 
-      <div class="visual-box">
-        방송 화면 영역처럼 보이던 위치에<br />
-        비즈오더 운영 흐름 이미지 또는<br />
-        QR 주문 / 운영 관리자 캡처 배치
+      <div class="visual-box" style="flex-direction:column;gap:12px;padding:24px;">
+        <div style="width:100%;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
+          <div style="background:#fff;border-radius:12px;padding:14px;text-align:center;border:1px solid #e5e7eb;">
+            <div style="margin-bottom:4px;"><i data-lucide="smartphone" style="width:24px;height:24px;color:#2563eb;stroke-width:1.5;"></i></div>
+            <div style="font-size:11px;font-weight:700;color:#0f172a;">QR 주문</div>
+            <div style="font-size:10px;color:#64748b;">고객 직접 주문</div>
+          </div>
+          <div style="background:#fff;border-radius:12px;padding:14px;text-align:center;border:1px solid #e5e7eb;">
+            <div style="margin-bottom:4px;"><i data-lucide="chef-hat" style="width:24px;height:24px;color:#ea580c;stroke-width:1.5;"></i></div>
+            <div style="font-size:11px;font-weight:700;color:#0f172a;">주방 KDS</div>
+            <div style="font-size:10px;color:#64748b;">실시간 전달</div>
+          </div>
+          <div style="background:#fff;border-radius:12px;padding:14px;text-align:center;border:1px solid #e5e7eb;">
+            <div style="margin-bottom:4px;"><i data-lucide="bar-chart-3" style="width:24px;height:24px;color:#2563eb;stroke-width:1.5;"></i></div>
+            <div style="font-size:11px;font-weight:700;color:#0f172a;">매출 분석</div>
+            <div style="font-size:10px;color:#64748b;">운영 데이터</div>
+          </div>
+        </div>
+        <div style="background:#fff;border-radius:12px;padding:14px;width:100%;border:1px solid #e5e7eb;">
+          <div style="font-size:12px;font-weight:700;color:#2563eb;margin-bottom:8px;">비즈오더 운영 흐름</div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:#475569;flex-wrap:wrap;">
+            <span style="background:#dbeafe;color:#2563eb;padding:4px 10px;border-radius:8px;font-weight:700;">QR 스캔</span>
+            <span>&#8594;</span>
+            <span style="background:#fef3c7;color:#d97706;padding:4px 10px;border-radius:8px;font-weight:700;">메뉴 선택</span>
+            <span>&#8594;</span>
+            <span style="background:#dcfce7;color:#16a34a;padding:4px 10px;border-radius:8px;font-weight:700;">주문 완료</span>
+            <span>&#8594;</span>
+            <span style="background:#fecaca;color:#dc2626;padding:4px 10px;border-radius:8px;font-weight:700;">주방 전달</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -1048,8 +1075,8 @@
 
       <div class="feature-grid">
         <div class="feature-card">
-          <div class="feature-thumb">QR 주문 메뉴 리스트 캡처 삽입</div>
-          <h3>QR 주문 시스템</h3>
+          <div class="feature-thumb" style="background:linear-gradient(135deg,#eff6ff,#dbeafe);border:1px solid #bfdbfe;"><i data-lucide="smartphone" style="width:36px;height:36px;color:#2563eb;stroke-width:1.5;"></i></div>
+          <h3>비즈오더 주문 시스템</h3>
           <p>
             카테고리별 메뉴 탐색, 추천/인기 표시, 가격 확인, 장바구니 담기까지
             고객이 직접 주문할 수 있는 비대면 주문 환경을 제공합니다.
@@ -1057,7 +1084,7 @@
         </div>
 
         <div class="feature-card">
-          <div class="feature-thumb">옵션 선택 화면 캡처 삽입</div>
+          <div class="feature-thumb" style="background:linear-gradient(135deg,#fef3c7,#fde68a);border:1px solid #fcd34d;"><i data-lucide="sliders-horizontal" style="width:36px;height:36px;color:#d97706;stroke-width:1.5;"></i></div>
           <h3>옵션 선택 주문</h3>
           <p>
             HOT/ICE, 우유 변경, 추가금액 반영 등 메뉴별 옵션을 세부 설정할 수 있어
@@ -1066,7 +1093,7 @@
         </div>
 
         <div class="feature-card">
-          <div class="feature-thumb">장바구니 / 주문 확인 바 캡처 삽입</div>
+          <div class="feature-thumb" style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid #bbf7d0;"><i data-lucide="shopping-cart" style="width:36px;height:36px;color:#16a34a;stroke-width:1.5;"></i></div>
           <h3>장바구니 및 주문 확인</h3>
           <p>
             선택 메뉴, 수량, 총 주문 금액을 한눈에 확인하고 바로 주문할 수 있어
@@ -1075,7 +1102,7 @@
         </div>
 
         <div class="feature-card">
-          <div class="feature-thumb">주방 KDS 캡처 삽입</div>
+          <div class="feature-thumb" style="background:linear-gradient(135deg,#fff7ed,#fed7aa);border:1px solid #fdba74;"><i data-lucide="chef-hat" style="width:36px;height:36px;color:#ea580c;stroke-width:1.5;"></i></div>
           <h3>주방 디스플레이</h3>
           <p>
             신규 주문, 조리중, 서빙 대기 상태를 한눈에 확인하고
@@ -1084,7 +1111,7 @@
         </div>
 
         <div class="feature-card">
-          <div class="feature-thumb">웨이팅 관리 캡처 삽입</div>
+          <div class="feature-thumb" style="background:linear-gradient(135deg,#faf5ff,#e9d5ff);border:1px solid #d8b4fe;"><i data-lucide="users" style="width:36px;height:36px;color:#7c3aed;stroke-width:1.5;"></i></div>
           <h3>웨이팅 자동 관리</h3>
           <p>
             대기 고객 등록, 호출, 입장 완료 처리를 통해 매장 앞 웨이팅 흐름을 체계적으로 운영할 수 있습니다.
@@ -1092,7 +1119,7 @@
         </div>
 
         <div class="feature-card">
-          <div class="feature-thumb">홀 테이블 현황 캡처 삽입</div>
+          <div class="feature-thumb" style="background:linear-gradient(135deg,#ecfdf5,#d1fae5);border:1px solid #6ee7b7;"><i data-lucide="layout-grid" style="width:36px;height:36px;color:#059669;stroke-width:1.5;"></i></div>
           <h3>테이블 상태 확인</h3>
           <p>
             빈자리, 이용중, 정리중 상태와 이용 시간, 주문 금액, 인원수까지 시각적으로 확인할 수 있어
@@ -1101,7 +1128,7 @@
         </div>
 
         <div class="feature-card">
-          <div class="feature-thumb">매출 분석 캡처 삽입</div>
+          <div class="feature-thumb" style="background:linear-gradient(135deg,#eff6ff,#dbeafe);border:1px solid #93c5fd;"><i data-lucide="bar-chart-3" style="width:36px;height:36px;color:#2563eb;stroke-width:1.5;"></i></div>
           <h3>매출 및 통계 분석</h3>
           <p>
             총 매출, 주문 건수, 평균 객단가, 신규 고객, 인기 메뉴, 카테고리 판매 비중 등
@@ -1110,7 +1137,7 @@
         </div>
 
         <div class="feature-card">
-          <div class="feature-thumb">메뉴 관리 캡처 삽입</div>
+          <div class="feature-thumb" style="background:linear-gradient(135deg,#fef2f2,#fecaca);border:1px solid #fca5a5;"><i data-lucide="clipboard-list" style="width:36px;height:36px;color:#dc2626;stroke-width:1.5;"></i></div>
           <h3>메뉴/품절 관리</h3>
           <p>
             메뉴명, 가격, 이미지, 카테고리, 판매 상태를 관리하고
@@ -1119,7 +1146,7 @@
         </div>
 
         <div class="feature-card">
-          <div class="feature-thumb">QR 코드 관리 + 직원 호출 캡처 삽입</div>
+          <div class="feature-thumb" style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid #bbf7d0;"><i data-lucide="qr-code" style="width:36px;height:36px;color:#16a34a;stroke-width:1.5;"></i></div>
           <h3>QR 코드 및 매장 설정</h3>
           <p>
             테이블별 QR 생성/인쇄, 직원 호출 문구 설정, 매장 운영 옵션 관리까지
@@ -1134,7 +1161,7 @@
   <section class="section dark-section">
     <div class="container text-center">
       <div class="eyebrow" style="background: rgba(96,165,250,0.12); color:#93c5fd;">도입 효과</div>
-      <h2 class="section-title">왜 비즈오더의 QR 테이블 주문인가</h2>
+      <h2 class="section-title">왜 비즈오더인가</h2>
 
       <div class="reason-grid">
         <div class="reason-card">
@@ -1269,7 +1296,7 @@
         <div class="field">
           <label>현재 필요하신 주요 기능</label>
           <div class="check-group">
-            <label class="check-item"><input type="checkbox" /> QR 테이블 주문</label>
+            <label class="check-item"><input type="checkbox" /> 비즈오더 QR 주문</label>
             <label class="check-item"><input type="checkbox" /> 주방 디스플레이</label>
             <label class="check-item"><input type="checkbox" /> 메뉴 / 품절 관리</label>
             <label class="check-item"><input type="checkbox" /> 웨이팅 관리</label>
@@ -1323,7 +1350,7 @@
     <div class="container">
       <h2>비즈오더 도입, 지금 시작해보세요</h2>
       <p>
-        QR 주문부터 주방 전달, 테이블 관리, 웨이팅, 매출 분석까지<br />
+        비즈오더로 QR 주문부터 주방 전달, 테이블 관리, 매출 분석까지<br />
         매장 운영에 필요한 흐름을 하나로 연결할 수 있습니다.
       </p>
       <a href="#consult" class="btn btn-white">무료 상담 신청</a>
@@ -1385,7 +1412,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // mailto: 폼 제출
 document.addEventListener('DOMContentLoaded', function() {
   var EMAIL = 'dsd041566@gmail.com';
-  var SUBJECT = '[비즈솔루션] QR 테이블 주문 상담 신청';
+  var SUBJECT = '[비즈솔루션] 비즈오더 상담 신청';
 
   document.querySelectorAll('form').forEach(function(form) {
     form.addEventListener('submit', function(e) {
@@ -1457,7 +1484,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
-
+<script>if(typeof lucide!=='undefined')lucide.createIcons();</script>
 </body>
-
 </html>
